@@ -11,6 +11,7 @@ Rules:
 - If the context does NOT contain the answer to a forestry/timber question, say exactly:
 "The dataset does not contain this information."
 - For other casual or off-topic questions, respond in a friendly and interactive way without using context.
+- Response in Markdown format.
 
 Chat History:
 {chat_history}
