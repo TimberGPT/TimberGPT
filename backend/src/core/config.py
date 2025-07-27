@@ -7,6 +7,17 @@ class Settings(BaseSettings):
     version: str = "1.0.0"
     api_prefix: str = "/api/v1"
 
+    # ============ RAG ============
+    chunk_size: int = 800
+    chunk_overlap: int = 150
+    retrieval_doc_k: int = 8
+    memory_window_k: int = 5
+    embedding_model: str = "models/embedding-001"
+    llm_model: str = "gemini-1.5-flash"
+    llm_temperature: float = 0.0
+    dataset_path: str
+    chroma_persist_dir: str
+
     # ======== JWT Settings ========
     jwt_secret_key: str
     jwt_algorithm: str = "HS256"

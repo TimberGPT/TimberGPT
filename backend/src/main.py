@@ -6,14 +6,19 @@ from fastapi.middleware.cors import CORSMiddleware
 import src.models
 from .core import init_db, settings
 from .features import api_router
+from src.features.gpt.gpt_core import ChatbotManager
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup operations
     init_db()
+    chatbot_manager = ChatbotManager()
+    await chatbot_manager.initialize()
+    app.state.chatbot_manager = chatbot_manager
+    print("Chatbot initialized successfully!!")
     yield
-    # Shutdown operations (if any)
+    # Shutdown operations
 
 
 app = FastAPI(
