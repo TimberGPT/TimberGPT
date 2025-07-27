@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Only</title>
+    <!-- Albert Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Albert Sans", sans-serif;
+        background-color: #f6f9ff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Breadcrumb Starts-->
+    <div class="m-5 block">
+      <div
+        class="px-3 py-1 rounded justify-center items-center gap-4 inline-flex"
+      >
+        <!-- Home icon starts here -->
+        <a href="/">
+          <img
+            src="https://i.ibb.co/vvs0cyBq/dashboard-home.png"
+            alt="dashboard-home"
+            border="0"
+            width="20px"
+            height="20px"
+          />
+        </a>
+        <!-- Home icon ends here -->
+
+        <div data-svg-wrapper>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.719158 7.92012L11.3466 7.92012L6.66563 12.6011L7.91613 13.8516L14.7319 7.03576L7.91613 0.219947L6.66563 1.47044L11.3466 6.15139L0.719158 6.15139L0.719158 7.92012Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <a
+          href="#"
+          class="text-black text-opacity-75 text-base font-semibold leading-5 break-words"
+        >
+          HR
+        </a>
+        <div data-svg-wrapper>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.884441 7.92012L11.5119 7.92012L6.83092 12.6011L8.08141 13.8516L14.8972 7.03576L8.08141 0.219947L6.83092 1.47044L11.5119 6.15139L0.884441 6.15139L0.884441 7.92012Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div
+          class="px-4 py-2 bg-purple-100 rounded-[100px] outline outline-2 outline-purple-700 outline-offset-[-5px] flex justify-center items-center gap-2 leading-none"
+        >
+          <div
+            class="text-black text-[16px] font-sans font-medium leading-[27px] break-words"
+          >
+            See Hierarchy
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb Ends-->
+
+    <!-- Main Content Starts-->
+    <!-- Table Section -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <!-- Card -->
+      <div class="flex flex-col">
+        <div class="-m-1.5 overflow-x-auto">
+          <div class="p-1.5 min-w-full inline-block align-middle">
+            <div
+              class="bg-white border border-gray-200 rounded-xl shadow-2xs overflow-hidden"
+            >
+              <!-- Header -->
+              <div
+                class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200"
+              >
+                <div>
+                  <h2 class="text-xl font-semibold text-gray-800">
+                    Recruitment Posts
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    Create recruitment form, edit, publish and more.
+                  </p>
+                </div>
+
+                <div>
+                  <div class="inline-flex gap-x-2">
+                    <a
+                      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                      href="#"
+                    >
+                      <svg
+                        class="shrink-0 size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="M12 5v14" />
+                      </svg>
+                      Create
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Header -->
+
+              <!-- Table -->
+              <div class="w-full overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th
+                        scope="col"
+                        class="px-2 py-2 sm:px-6 sm:py-3 text-start text-base sm:text-sm"
+                      >
+                        <span class="font-semibold text-gray-800"> Title </span>
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-2 py-2 sm:px-6 sm:py-3 text-start w-[120px] sm:w-[175px] text-base sm:text-sm"
+                      >
+                        <span class="font-semibold text-gray-800">
+                          Employment Type
+                        </span>
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-2 py-2 sm:px-6 sm:py-3 text-start text-base sm:text-sm"
+                      >
+                        <span class="font-semibold text-gray-800">
+                          Job Description
+                        </span>
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-2 py-2 sm:px-6 sm:py-3 text-start text-base sm:text-sm"
+                      >
+                        <span class="font-semibold text-gray-800">
+                          Created At
+                        </span>
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-2 py-2 sm:px-6 sm:py-3 text-start text-base sm:text-sm"
+                      >
+                        <span class="font-semibold text-gray-800">
+                          End Date
+                        </span>
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-2 py-2 sm:px-6 sm:py-3 text-end"
+                      ></th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200">
+                    <!-- Sample Row 1 -->
+                    <tr class="bg-white hover:bg-gray-50">
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block font-semibold text-gray-800">
+                          Software Engineer
+                        </span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">Full Time</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600 line-clamp-2">
+                          Responsible for developing scalable web applications
+                          and collaborating with cross-functional teams.
+                        </span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">May 01, 2025</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">Jun 15, 2025</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <a
+                          href="#"
+                          class="inline-flex justify-center items-center gap-2 rounded-lg border border-gray-200 font-medium bg-white text-gray-700 shadow-2xs align-middle hover:bg-gray-50 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all px-2 py-1"
+                        >
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                    <!-- Sample Row 2 -->
+                    <tr class="bg-white hover:bg-gray-50">
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block font-semibold text-gray-800">
+                          HR Manager
+                        </span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">Part Time</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600 line-clamp-2">
+                          Oversee recruitment processes and employee relations
+                          for the organization.
+                        </span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">Apr 20, 2025</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">May 30, 2025</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <a
+                          href="#"
+                          class="inline-flex justify-center items-center gap-2 rounded-lg border border-gray-200 font-medium bg-white text-gray-700 shadow-2xs align-middle hover:bg-gray-50 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all px-2 py-1"
+                        >
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                    <!-- Sample Row 3 -->
+                    <tr class="bg-white hover:bg-gray-50">
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block font-semibold text-gray-800">
+                          Data Analyst
+                        </span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">Contract</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600 line-clamp-2">
+                          Analyze business data and generate actionable insights
+                          for management.
+                        </span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">Mar 10, 2025</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <span class="block text-gray-600">Apr 10, 2025</span>
+                      </td>
+                      <td
+                        class="whitespace-normal break-words px-2 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm"
+                      >
+                        <a
+                          href="#"
+                          class="inline-flex justify-center items-center gap-2 rounded-lg border border-gray-200 font-medium bg-white text-gray-700 shadow-2xs align-middle hover:bg-gray-50 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all px-2 py-1"
+                        >
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+
+              <!-- Footer -->
+              <div
+                class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+              >
+                <div class="inline-flex items-center gap-x-2">
+                  <p class="text-sm text-gray-600">Showing:</p>
+                  <div class="max-w-sm space-y-3">
+                    <select
+                      class="py-2 px-3 pe-9 block w-full border-gray-500 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500"
+                    >
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option selected>9</option>
+                      <option>20</option>
+                    </select>
+                  </div>
+                  <p class="text-sm text-gray-600">of 20</p>
+                </div>
+
+                <div>
+                  <div class="inline-flex gap-x-2">
+                    <button
+                      type="button"
+                      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                    >
+                      <svg
+                        class="shrink-0 size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="m15 18-6-6 6-6" />
+                      </svg>
+                      Prev
+                    </button>
+
+                    <button
+                      type="button"
+                      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none d"
+                    >
+                      Next
+                      <svg
+                        class="shrink-0 size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- End Footer -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+    </div>
+    <!-- End Table Section -->
+  </body>
+</html>

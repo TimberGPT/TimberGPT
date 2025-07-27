@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Only</title>
+    <!-- Albert Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Albert Sans", sans-serif;
+        background-color: #f6f9ff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Breadcrumb Starts-->
+    <div class="m-3 block">
+      <div
+        class="px-3 py-1 rounded justify-center items-center gap-4 inline-flex"
+      >
+        <!-- Home icon starts here -->
+        <a href="/">
+          <img
+            src="https://i.ibb.co/vvs0cyBq/dashboard-home.png"
+            alt="dashboard-home"
+            border="0"
+            width="20px"
+            height="20px"
+          />
+        </a>
+        <!-- Home icon ends here -->
+
+        <div data-svg-wrapper>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.884441 7.92012L11.5119 7.92012L6.83092 12.6011L8.08141 13.8516L14.8972 7.03576L8.08141 0.219947L6.83092 1.47044L11.5119 6.15139L0.884441 6.15139L0.884441 7.92012Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div
+          class="px-4 py-2 bg-purple-100 rounded-[100px] outline outline-2 outline-purple-700 outline-offset-[-5px] flex justify-center items-center gap-2 leading-none"
+        >
+          <div
+            class="text-black text-[16px] font-sans font-medium leading-[27px] break-words"
+          >
+            Profile Settings
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb Ends-->
+
+    <!-- Main Content Starts-->
+    <!-- Tab Navigation -->
+    <div class="max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto">
+      <div class="border-b border-gray-200">
+        <nav class="flex space-x-8" aria-label="Tabs">
+          <button
+            class="py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-blue-600 text-sm font-medium text-blue-600 whitespace-nowrap"
+            aria-current="page"
+          >
+            Profile Settings
+          </button>
+          <button
+            class="py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-blue-600 hover:border-blue-600 whitespace-nowrap"
+          >
+            Company Settings
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Profile Settings Tab Content -->
+    <div
+      id="profile-settings"
+      class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 mx-auto"
+    >
+      <!-- Card -->
+      <div class="bg-white rounded-xl shadow-xs p-4 sm:p-7">
+        <div class="mb-8">
+          <h2 class="text-xl font-bold text-gray-800">Profile</h2>
+          <p class="text-sm text-gray-600">
+            Manage your name, password and account settings.
+          </p>
+        </div>
+
+        <form>
+          <!-- Grid -->
+          <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
+            <div class="sm:col-span-3">
+              <label class="inline-block text-sm text-gray-800 mt-2.5">
+                Profile photo
+                <span class="font-bold text-red-600">*</span>
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <div class="flex items-center gap-5">
+                <img
+                  class="inline-block size-16 rounded-full ring-2 ring-white"
+                  src="https://preline.co/assets/img/160x160/img1.jpg"
+                  alt="Avatar"
+                />
+                <div class="flex gap-x-2">
+                  <div>
+                    <button
+                      type="button"
+                      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50"
+                    >
+                      <svg
+                        class="shrink-0 size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="17 8 12 3 7 8" />
+                        <line x1="12" x2="12" y1="3" y2="15" />
+                      </svg>
+                      Upload photo
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-3">
+              <label
+                for="af-account-full-name"
+                class="inline-block text-sm text-gray-800 mt-2.5"
+                >Full name
+                <span class="font-bold text-red-600">*</span>
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <div class="sm:flex">
+                <input
+                  id="af-account-full-name"
+                  type="text"
+                  class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg sm:text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Mohammad"
+                  required
+                />
+                <input
+                  type="text"
+                  class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg sm:text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Mullick"
+                />
+              </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-3">
+              <label
+                for="af-account-email"
+                class="inline-block text-sm text-gray-800 mt-2.5"
+              >
+                Email
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <input
+                id="af-account-email"
+                type="email"
+                class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs sm:text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                placeholder="abc@gmail.com"
+              />
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-3">
+              <label
+                for="af-account-password"
+                class="inline-block text-sm text-gray-800 mt-2.5"
+              >
+                Password
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <div class="flex gap-4">
+                <input
+                  id="af-account-password"
+                  type="text"
+                  class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Enter current password"
+                />
+                <input
+                  type="text"
+                  class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Enter new password"
+                />
+              </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-3">
+              <div class="inline-block">
+                <label
+                  for="af-account-phone"
+                  class="inline-block text-sm text-gray-800 mt-2.5"
+                >
+                  Phone
+                  <span class="font-bold text-red-600">*</span>
+                </label>
+                <span class="text-sm text-gray-400"> (Optional) </span>
+              </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <div class="sm:flex">
+                <input
+                  id="af-account-phone"
+                  type="text"
+                  class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg sm:text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="+x(xxx)xxx-xx-xx"
+                  required
+                />
+                <select
+                  class="py-1.5 sm:py-2 px-3 pe-9 block w-full sm:w-auto border-gray-200 shadow-2xs -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg sm:text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  <option selected>Mobile</option>
+                  <option>Home</option>
+                  <option>Work</option>
+                  <option>Fax</option>
+                </select>
+              </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-3">
+              <label
+                for="af-account-gender-checkbox"
+                class="inline-block text-sm text-gray-800 mt-2.5"
+              >
+                Gender
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <div class="sm:flex">
+                <label
+                  for="af-account-gender-checkbox"
+                  class="flex py-2 px-3 w-full border border-gray-200 shadow-2xs -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  <input
+                    type="radio"
+                    name="af-account-gender-checkbox"
+                    class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                    id="af-account-gender-checkbox"
+                    checked
+                  />
+                  <span class="sm:text-sm text-gray-500 ms-3">Male</span>
+                </label>
+
+                <label
+                  for="af-account-gender-checkbox-female"
+                  class="flex py-2 px-3 w-full border border-gray-200 shadow-2xs -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  <input
+                    type="radio"
+                    name="af-account-gender-checkbox"
+                    class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                    id="af-account-gender-checkbox-female"
+                  />
+                  <span class="sm:text-sm text-gray-500 ms-3">Female</span>
+                </label>
+              </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-3">
+              <label
+                for="af-account-bio"
+                class="inline-block text-sm text-gray-800 mt-2.5"
+              >
+                BIO
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <textarea
+                id="af-account-bio"
+                class="py-1.5 sm:py-2 px-3 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 checked:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                rows="5"
+                placeholder="Type your message..."
+              ></textarea>
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Grid -->
+
+          <div class="mt-5 flex justify-end gap-x-2">
+            <button
+              type="button"
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+            >
+              Save changes
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- End Card Section -->
+    </div>
+
+    <!-- Company Settings Tab Content -->
+    <div
+      id="company-settings"
+      class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 mx-auto hidden"
+    >
+      <!-- Card -->
+      <div class="bg-white rounded-xl shadow-xs p-4 sm:p-7">
+        <div class="mb-8">
+          <h2 class="text-xl font-bold text-gray-800">Company</h2>
+          <p class="text-sm text-gray-600">
+            Manage your company details and branding settings.
+          </p>
+        </div>
+
+        <form method="POST" enctype="multipart/form-data">
+          <!-- Grid -->
+          <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
+            <!-- Company Logo -->
+            <div class="sm:col-span-3">
+              <label
+                for="logo_url"
+                class="inline-block text-sm text-gray-800 mt-2.5"
+              >
+                Company logo
+              </label>
+            </div>
+            <div class="sm:col-span-9">
+              <div class="flex items-center gap-5">
+                <img
+                  id="company-logo-preview"
+                  class="inline-block size-16 rounded-lg ring-2 ring-white"
+                  src="https://placehold.co/100x100"
+                  alt="Company Logo"
+                />
+                <div class="flex gap-x-2">
+                  <input
+                    type="file"
+                    id="logo_url"
+                    name="logo_url"
+                    accept="image/*"
+                    class="hidden"
+                    onchange="document.getElementById('company-logo-preview').src = window.URL.createObjectURL(this.files[0])"
+                  />
+                  <button
+                    type="button"
+                    onclick="document.getElementById('logo_url').click()"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50"
+                  >
+                    <svg
+                      class="shrink-0 size-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="17 8 12 3 7 8" />
+                      <line x1="12" x2="12" y1="3" y2="15" />
+                    </svg>
+                    Upload logo
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Company Name -->
+            <div class="sm:col-span-3">
+              <label
+                for="name"
+                class="inline-block text-sm text-gray-800 mt-2.5"
+              >
+                Company name
+              </label>
+            </div>
+            <div class="sm:col-span-9">
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500"
+                placeholder="Enter company name"
+              />
+            </div>
+
+            <!-- Location & Industry Type in Flex Row -->
+            <div class="sm:col-span-12">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <!-- Location -->
+                <div class="flex-1">
+                  <label
+                    for="location"
+                    class="inline-block text-sm text-gray-800 mt-2.5"
+                  >
+                    Location
+                  </label>
+                  <input
+                    id="location"
+                    name="location"
+                    type="text"
+                    required
+                    class="mt-1 py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="Enter company location"
+                  />
+                </div>
+                <!-- Industry Type -->
+                <div class="flex-1">
+                  <label
+                    for="industry_type"
+                    class="inline-block text-sm text-gray-800 mt-2.5"
+                  >
+                    Industry type
+                  </label>
+                  <select
+                    id="industry_type"
+                    name="industry_type"
+                    required
+                    class="mt-1 py-1.5 sm:py-2 px-3 pe-9 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500"
+                  >
+                    <option value="" selected disabled>Select industry</option>
+                    <option>Technology</option>
+                    <option>Healthcare</option>
+                    <option>Finance</option>
+                    <option>Education</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Founding Year & Website URL in Flex Row -->
+            <div class="sm:col-span-12">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <!-- Founding Year -->
+                <div class="flex-1">
+                  <label
+                    for="founding_year"
+                    class="inline-block text-sm text-gray-800 mt-2.5"
+                  >
+                    Founding Year
+                  </label>
+                  <input
+                    id="founding_year"
+                    name="founding_year"
+                    type="number"
+                    min="1800"
+                    max="2100"
+                    required
+                    class="mt-1 py-1.5 sm:py-2 px-3 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="e.g. 2020"
+                  />
+                </div>
+                <!-- Website URL -->
+                <div class="flex-1">
+                  <label
+                    for="website_url"
+                    class="inline-block text-sm text-gray-800 mt-2.5"
+                  >
+                    Website URL
+                  </label>
+                  <input
+                    id="website_url"
+                    name="website_url"
+                    type="url"
+                    class="mt-1 py-1.5 sm:py-2 px-3 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="https://example.com"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Monthly Target -->
+            <div class="sm:col-span-3">
+              <label
+                for="monthly_target"
+                class="inline-block text-sm text-gray-800 mt-2.5"
+              >
+                Monthly Target
+              </label>
+            </div>
+            <div class="sm:col-span-9">
+              <input
+                id="monthly_target"
+                name="monthly_target"
+                type="number"
+                min="0"
+                class="py-1.5 sm:py-2 px-3 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500"
+                placeholder="Enter monthly target"
+              />
+            </div>
+
+            <!-- Problem Solve & How Work in Flex Row -->
+            <div class="sm:col-span-12">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <!-- Problem Solve -->
+                <div class="flex-1">
+                  <label
+                    for="problem_solve"
+                    class="inline-block text-sm text-gray-800 mt-2.5"
+                  >
+                    What problem do you solve?
+                  </label>
+                  <textarea
+                    id="problem_solve"
+                    name="problem_solve"
+                    class="mt-1 py-1.5 sm:py-2 px-3 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500"
+                    rows="3"
+                    placeholder="Describe the problem your company solves"
+                  ></textarea>
+                </div>
+                <!-- How Work -->
+                <div class="flex-1">
+                  <label
+                    for="how_work"
+                    class="inline-block text-sm text-gray-800 mt-2.5"
+                  >
+                    How does your company work?
+                  </label>
+                  <textarea
+                    id="how_work"
+                    name="how_work"
+                    class="mt-1 py-1.5 sm:py-2 px-3 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500"
+                    rows="3"
+                    placeholder="Describe how your company operates"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- End Grid -->
+
+          <div class="mt-5 flex justify-end gap-x-2">
+            <button
+              type="button"
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700"
+            >
+              Save changes
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- End Card -->
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll("nav button");
+        const profileContent = document.getElementById("profile-settings");
+        const companyContent = document.getElementById("company-settings");
+
+        tabs.forEach((tab, idx) => {
+          tab.addEventListener("click", () => {
+            // Reset all tabs
+            tabs.forEach((t) => {
+              t.classList.remove("border-blue-600", "text-blue-600");
+              t.classList.add("border-transparent", "text-gray-500");
+            });
+
+            // Activate clicked tab
+            tab.classList.remove("border-transparent", "text-gray-500");
+            tab.classList.add("border-blue-600", "text-blue-600");
+
+            // Show corresponding content
+            profileContent.classList.add("hidden");
+            companyContent.classList.add("hidden");
+            if (tab.textContent.trim() === "Profile Settings") {
+              profileContent.classList.remove("hidden");
+            } else if (tab.textContent.trim() === "Company Settings") {
+              companyContent.classList.remove("hidden");
+            }
+          });
+        });
+      });
+
+      // Dummy function for invite link
+      function sendInviteLink() {
+        const email = document.getElementById("invite-email").value;
+        if (email) {
+          alert("Invitation link sent to " + email);
+        }
+      }
+    </script>
+  </body>
+</html>

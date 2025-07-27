@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Only</title>
+    <!-- Albert Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Albert Sans", sans-serif;
+        background-color: #f6f9ff;
+      }
+      input,
+      textarea,
+      select {
+        outline: solid 1px #e5e7eb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Breadcrumb Starts-->
+    <div class="m-5 block">
+      <div
+        class="px-3 py-1 rounded justify-center items-center gap-4 inline-flex scale-[.85]"
+      >
+        <!-- Home icon starts here -->
+        <a href="/">
+          <img
+            src="https://i.ibb.co/vvs0cyBq/dashboard-home.png"
+            alt="dashboard-home"
+            border="0"
+            width="20px"
+            height="20px"
+          />
+        </a>
+        <!-- Home icon ends here -->
+
+        <div data-svg-wrapper>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.719158 7.92012L11.3466 7.92012L6.66563 12.6011L7.91613 13.8516L14.7319 7.03576L7.91613 0.219947L6.66563 1.47044L11.3466 6.15139L0.719158 6.15139L0.719158 7.92012Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <a
+          href="#"
+          class="text-black text-opacity-75 text-base font-semibold leading-5 break-words"
+        >
+          Projects Overview
+        </a>
+        <div data-svg-wrapper>
+          <svg
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.884441 7.92012L11.5119 7.92012L6.83092 12.6011L8.08141 13.8516L14.8972 7.03576L8.08141 0.219947L6.83092 1.47044L11.5119 6.15139L0.884441 6.15139L0.884441 7.92012Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div
+          class="px-4 py-2 bg-purple-100 rounded-[100px] outline outline-2 outline-purple-700 outline-offset-[-5px] flex justify-center items-center gap-2 leading-none"
+        >
+          <div
+            class="text-black text-[16px] font-sans font-medium leading-[27px] break-words"
+          >
+            Project Settings
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb Ends-->
+
+    <!-- Main Content Starts-->
+    <!-- Card Section -->
+    <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-8 mx-auto">
+      <form>
+        <!-- Card -->
+        <div class="bg-white rounded-xl shadow-xs">
+          <div class="pt-0 p-4 sm:pt-0 sm:p-7">
+            <!-- Grid -->
+            <div class="space-y-4 sm:space-y-3">
+              <div class="pt-3 space-y-2">
+                <label
+                  for="app-project-name"
+                  class="inline-block text-sm font-medium text-gray-800 mt-2.5"
+                >
+                  Project name
+                </label>
+
+                <input
+                  id="project-name"
+                  type="text"
+                  class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Enter project name"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  for="app-description"
+                  class="inline-block text-sm font-medium text-gray-800 mt-2.5"
+                >
+                  Description
+                </label>
+
+                <textarea
+                  id="app-description"
+                  class="py-1.5 sm:py-2 px-3 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  rows="6"
+                  placeholder="A detailed summary will better explain your products to the audiences. Our users will see this in your dedicated product page."
+                ></textarea>
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  for="project-url"
+                  class="inline-block text-sm font-medium text-gray-800 mt-2.5"
+                >
+                  Project Status
+                </label>
+
+                <input
+                  id="project-url"
+                  type="text"
+                  class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs sm:text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="https://example.so"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  for="project-priority-level"
+                  class="inline-block text-sm font-medium text-gray-800 mt-2.5"
+                >
+                  Priority Level
+                </label>
+
+                <input
+                  id="project-priority-level"
+                  type="text"
+                  class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs sm:text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="https://example.so"
+                />
+              </div>
+
+              <div
+                class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0"
+              >
+                <div class="flex-1">
+                  <label
+                    for="project-due-date"
+                    class="inline-block text-sm font-medium text-gray-800 mt-2.5"
+                  >
+                    Due date
+                  </label>
+                  <input
+                    id="project-due-date"
+                    type="date"
+                    class="py-1.5 sm:py-2 px-3 block w-full border-gray-200 shadow-2xs sm:text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                </div>
+                <div class="flex-1">
+                  <label
+                    for="project-end-date"
+                    class="inline-block text-sm font-medium text-gray-800 mt-2.5"
+                  >
+                    End date
+                  </label>
+                  <input
+                    id="project-end-date"
+                    type="date"
+                    class="py-1.5 sm:py-2 px-3 block w-full border-gray-200 shadow-2xs sm:text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  for="app-category"
+                  class="inline-block text-sm font-medium text-gray-800 mt-2.5"
+                >
+                  Category
+                </label>
+
+                <select
+                  id="app-category"
+                  class="py-1.5 sm:py-2 px-3 pe-9 block w-full border-gray-200 shadow-2xs rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  <option selected>Select a category</option>
+                  <option>Web Development</option>
+                  <option>Mobile App</option>
+                  <option>UI/UX Design</option>
+                  <option>Branding</option>
+                  <option>Marketing</option>
+                  <option>Content Creation</option>
+                  <option>SEO</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <!-- End Grid -->
+
+            <div class="mt-5 flex justify-center gap-x-2">
+              <button
+                type="button"
+                class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+              >
+                Add project
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- End Card -->
+      </form>
+    </div>
+    <!-- End Card Section -->
+    <!-- Main Content Ends-->
+  </body>
+</html>

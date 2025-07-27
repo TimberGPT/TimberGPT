@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .progress-circle {
+        transform: rotate(-90deg);
+      }
+      .progress-bar {
+        stroke-dasharray: 283;
+        stroke-dashoffset: 69;
+        transition: stroke-dashoffset 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 p-6">
+    <nav
+      class="bg-white border-b border-primary fixed top-0 left-0 w-full z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-9"
+      >
+        <!-- {/* Left as */} -->
+        <div class="flex space-x-8 text-[18px] font-medium">
+          <a href="/dashboard"> Dashboard </a>
+          <a
+            href="/dashboard/project"
+            class="text-gray-700 hover:text-primary transition-colors"
+          >
+            Project
+          </a>
+          <a href="/dashboard/sales"> Transaction </a>
+          <a href="/dashboard/employee"> Employee </a>
+        </div>
+
+        <!-- {/* Logo */} -->
+        <div class="flex-shrink-0">
+          <img
+            src="https://i.ibb.co/2YFVt16q/betterstart-logo.png"
+            alt="BetterStart"
+            width="{250}"
+            height="{70}"
+            class="h-8 w-auto"
+          />
+        </div>
+
+        <!-- {/* Right as + avatar */} -->
+        <div class="flex items-center space-x-6 text-[18px] font-medium">
+          <a href="/dashboard/ai"> Extras </a>
+          <a href="/dashboard/pricing"> Pricing </a>
+          <a href="/dashboard/settings"> Settings </a>
+          <span class="h-6 border-l border-gray-300"></span>
+          <div class="flex items-center space-x-2">
+            <img
+              src="https://i.pravatar.cc/32"
+              alt="User avatar"
+              width="{32}"
+              height="{32}"
+              class="w-8 h-8 rounded-full"
+            />
+            <span class="font-medium">maomislive</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="max-w-7xl mx-auto mt-28 mb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Left Column -->
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Top Row - Stats Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Product Card -->
+            <div class="bg-white rounded-2xl p-6 border border-gray-300">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="text-sm text-gray-500 mb-1">Total Projects</div>
+              <div class="flex items-end gap-3">
+                <div class="text-3xl font-bold text-gray-900">50</div>
+                <div class="flex items-center text-sm text-green-600 mb-1">
+                  <svg
+                    class="w-4 h-4 mr-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 10l7-7m0 0l7 7m-7-7v18"
+                    ></path>
+                  </svg>
+                  33%
+                </div>
+              </div>
+            </div>
+
+            <!-- Sales Card -->
+            <div class="bg-white rounded-2xl p-6 border border-gray-300">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center"
+                >
+                  <img
+                    width="24"
+                    height="24"
+                    src="https://img.icons8.com/material-outlined/48/sales-performance.png"
+                    alt="sales-performance"
+                    class="opacity-50"
+                  />
+                </div>
+              </div>
+              <div class="text-sm text-gray-500 mb-1">Total Sales</div>
+              <div class="flex items-end gap-3">
+                <div class="text-3xl font-bold text-gray-900">Tk. 25k</div>
+                <div class="flex items-center text-sm text-red-600 mb-1">
+                  <svg
+                    class="w-4 h-4 mr-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    ></path>
+                  </svg>
+                  9.05%
+                </div>
+              </div>
+            </div>
+
+            <!-- Employee Card -->
+            <div class="bg-white rounded-2xl p-6 border border-gray-300">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="text-sm text-gray-500 mb-1">Total Employees</div>
+              <div class="flex items-end gap-3">
+                <div class="text-3xl font-bold text-gray-900">5</div>
+                <div class="flex items-center text-sm text-red-600 mb-1">
+                  <svg
+                    class="w-4 h-4 mr-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    ></path>
+                  </svg>
+                  9.05%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Monthly Sales Chart -->
+          <div class="bg-white rounded-2xl p-6 border border-gray-300">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-lg font-semibold text-gray-900">Monthly Sales</h3>
+              <button class="text-gray-400 hover:text-gray-600">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Chart -->
+            <div class="relative h-48">
+              <div class="absolute inset-0 flex items-end justify-between px-2">
+                <!-- Jan -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-20 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Jan</span>
+                </div>
+                <!-- Feb -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-32 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Feb</span>
+                </div>
+                <!-- Mar -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-24 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Mar</span>
+                </div>
+                <!-- Apr -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-28 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Apr</span>
+                </div>
+                <!-- May -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-26 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">May</span>
+                </div>
+                <!-- Jun -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-22 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Jun</span>
+                </div>
+                <!-- Jul -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-28 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Jul</span>
+                </div>
+                <!-- Aug -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-16 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Aug</span>
+                </div>
+                <!-- Sep -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-24 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Sep</span>
+                </div>
+                <!-- Oct -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-36 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Oct</span>
+                </div>
+                <!-- Nov -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-30 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Nov</span>
+                </div>
+                <!-- Dec -->
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-20 bg-[#6A49BA] rounded-t-sm mb-2"></div>
+                  <span class="text-xs text-[#6A49BA]/70">Dec</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Monthly Target -->
+        <div class="bg-white rounded-2xl p-6 border border-gray-300 relative">
+          <div class="flex items-center justify-between mb-2">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">
+                Monthly Target
+              </h3>
+              <p class="text-sm text-gray-500">
+                Target you've set for each month
+              </p>
+            </div>
+            <a
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50"
+              href="/dashboard/sales/invoice_form"
+            >
+              <svg
+                class="shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+              Set Target
+            </a>
+          </div>
+
+          <!-- Progress Semi-Circle -->
+          <div class="flex justify-center mb-8">
+            <div class="relative">
+              <svg class="w-64 h-48" viewBox="0 0 200 120">
+                <!-- Background semi-circle -->
+                <path
+                  d="M 20 100 A 80 80 0 0 1 180 100"
+                  stroke="#E5E7EB"
+                  stroke-width="12"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <!-- Progress semi-circle -->
+                <path
+                  id="progress-bar"
+                  d="M 20 100 A 80 80 0 0 1 180 100"
+                  stroke="#6A49BA"
+                  stroke-width="12"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-dasharray="251.2"
+                  stroke-dashoffset="251.2"
+                  class="transition-all duration-1000 ease-out"
+                />
+              </svg>
+              <div
+                class="absolute inset-x-0 bottom-2 flex flex-col items-center justify-center mt-4"
+              >
+                <div class="text-4xl font-bold text-[#6A49BA]">75.55%</div>
+                <div
+                  class="text-sm text-green-600 font-medium bg-green-100 px-2 my-2"
+                >
+                  +10%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="text-center mb-8">
+            <p class="text-gray-600 text-sm">
+              You earn <span class="font-semibold">$3287</span> today, it's
+              higher than last month.
+            </p>
+            <p class="text-gray-600 text-sm mt-1">Keep up your good work!</p>
+          </div>
+
+          <!-- Bottom Stats -->
+          <div
+            class="grid grid-cols-3 gap-4 bg-gray-100 absolute inset-x-0 bottom-0 py-5"
+          >
+            <!-- Target -->
+            <div class="text-center">
+              <div class="text-xs text-gray-500 mb-1">Target</div>
+              <div class="flex items-center justify-center gap-1">
+                <span class="text-lg font-bold text-gray-900">$20K</span>
+                <svg
+                  class="w-4 h-4 text-red-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <!-- Revenue -->
+            <div class="text-center">
+              <div class="text-xs text-gray-500 mb-1">Revenue</div>
+              <div class="flex items-center justify-center gap-1">
+                <span class="text-lg font-bold text-gray-900">$20K</span>
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <!-- Today -->
+            <div class="text-center">
+              <div class="text-xs text-gray-500 mb-1">Today</div>
+              <div class="flex items-center justify-center gap-1">
+                <span class="text-lg font-bold text-gray-900">$20K</span>
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Table Section -->
+        <div class="mx-auto box-content md:box-border">
+          <!-- Card -->
+          <div class="flex flex-col">
+            <div class="mt-1.5 overflow-x-auto">
+              <div
+                class="min-w-full inline-block align-middle rounded-2x1 max-w-[630px]"
+              >
+                <div
+                  class="bg-white border border-gray-300 overflow-hidden rounded-2xl"
+                >
+                  <!-- /* Header  -->
+                  <div
+                    class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 rounded-2xl"
+                  >
+                    <div>
+                      <h2 class="text-xl font-semibold text-gray-800">
+                        Recent Projects
+                      </h2>
+                    </div>
+
+                    <div>
+                      <div class="inline-flex gap-x-2">
+                        <a
+                          class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-300 text-black hover:bg-gray-50"
+                          href="/dashboard/sales/invoice_view"
+                        >
+                          <svg
+                            class="shrink-0 size-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path
+                              d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                            />
+                            <circle cx="12" cy="12" r="3" />
+                          </svg>
+                          View
+                        </a>
+                        <a
+                          class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-300 text-black hover:bg-gray-50"
+                          href="/dashboard/sales/invoice_form"
+                        >
+                          <svg
+                            class="shrink-0 size-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M5 12h14" />
+                            <path d="M12 5v14" />
+                          </svg>
+                          Create
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Header  -->
+
+                  <!-- Table  -->
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Invoice number
+                            </span>
+                            <div class="hs-tooltip">
+                              <div class="hs-tooltip-toggle">
+                                <svg
+                                  class="shrink-0 size-4 text-gray-500"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                >
+                                  <circle cx="12" cy="12" r="10" />
+                                  <path
+                                    d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                                  />
+                                  <path d="M12 17h.01" />
+                                </svg>
+                                <span
+                                  class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs"
+                                  role="tooltip"
+                                >
+                                  Invoice number related popup
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Amount
+                            </span>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Status
+                            </span>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Due
+                            </span>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Created
+                            </span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="divide-y divide-gray-200">
+                      <tr class="bg-white hover:bg-gray-50">
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="font-mono text-sm text-purple-600">
+                                #ADUQ2189H1-0038
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                US $400.00
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span
+                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full"
+                              >
+                                <svg
+                                  class="size-2.5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                  />
+                                </svg>
+                                Paid
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                10 Jan 2023
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                28 Dec, 12:12
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white hover:bg-gray-50">
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="font-mono text-sm text-purple-600">
+                                #ADUQ2189H1-0038
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                US $400.00
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span
+                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full"
+                              >
+                                <svg
+                                  class="size-2.5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8A8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                  />
+                                </svg>
+                                Paid
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                10 Jan 2023
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                28 Dec, 12:12
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white hover:bg-gray-50">
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="font-mono text-sm text-purple-600">
+                                #ADUQ2189H1-0038
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                US $400.00
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span
+                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full"
+                              >
+                                <svg
+                                  class="size-2.5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8A8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                  />
+                                </svg>
+                                Paid
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                10 Jan 2023
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                28 Dec, 12:12
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white hover:bg-gray-50">
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="font-mono text-sm text-purple-600">
+                                #ADUQ2189H1-0038
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                US $400.00
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span
+                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full"
+                              >
+                                <svg
+                                  class="size-2.5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8A8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                  />
+                                </svg>
+                                Paid
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                10 Jan 2023
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                28 Dec, 12:12
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <!-- Repeat the same pattern for other rows...  -->
+                      <!-- Just replace <button> with <a href="/dashboard/sales/invoice_view">  -->
+                    </tbody>
+                  </table>
+                  <!-- End Table  -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Card  -->
+        </div>
+        <!-- End Table Section  -->
+        <!-- Table Section -->
+        <div class="mx-auto box-content md:box-border">
+          <!-- Card -->
+          <div class="flex flex-col">
+            <div class="mt-1.5 overflow-x-auto">
+              <div
+                class="min-w-full inline-block align-middle rounded-2x1 max-w-[630px]"
+              >
+                <div
+                  class="bg-white border border-gray-300 overflow-hidden rounded-2xl"
+                >
+                  <!-- /* Header  -->
+                  <div
+                    class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 rounded-2xl"
+                  >
+                    <div>
+                      <h2 class="text-xl font-semibold text-gray-800">
+                        Recent Sales
+                      </h2>
+                    </div>
+
+                    <div>
+                      <div class="inline-flex gap-x-2">
+                        <a
+                          class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-300 text-black hover:bg-gray-50"
+                          href="/dashboard/sales/invoice_view"
+                        >
+                          <svg
+                            class="shrink-0 size-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path
+                              d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                            />
+                            <circle cx="12" cy="12" r="3" />
+                          </svg>
+                          View
+                        </a>
+                        <a
+                          class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-300 text-black hover:bg-gray-50"
+                          href="/dashboard/sales/invoice_form"
+                        >
+                          <svg
+                            class="shrink-0 size-4"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M5 12h14" />
+                            <path d="M12 5v14" />
+                          </svg>
+                          Create
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Header  -->
+
+                  <!-- Table  -->
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Invoice number
+                            </span>
+                            <div class="hs-tooltip">
+                              <div class="hs-tooltip-toggle">
+                                <svg
+                                  class="shrink-0 size-4 text-gray-500"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                >
+                                  <circle cx="12" cy="12" r="10" />
+                                  <path
+                                    d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                                  />
+                                  <path d="M12 17h.01" />
+                                </svg>
+                                <span
+                                  class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs"
+                                  role="tooltip"
+                                >
+                                  Invoice number related popup
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Amount
+                            </span>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Status
+                            </span>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Due
+                            </span>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase text-gray-800"
+                            >
+                              Created
+                            </span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="divide-y divide-gray-200">
+                      <tr class="bg-white hover:bg-gray-50">
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="font-mono text-sm text-purple-600">
+                                #ADUQ2189H1-0038
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                US $400.00
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span
+                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full"
+                              >
+                                <svg
+                                  class="size-2.5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                  />
+                                </svg>
+                                Paid
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                10 Jan 2023
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                28 Dec, 12:12
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white hover:bg-gray-50">
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="font-mono text-sm text-purple-600">
+                                #ADUQ2189H1-0038
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                US $400.00
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span
+                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full"
+                              >
+                                <svg
+                                  class="size-2.5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8A8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                  />
+                                </svg>
+                                Paid
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                10 Jan 2023
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                28 Dec, 12:12
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white hover:bg-gray-50">
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="font-mono text-sm text-purple-600">
+                                #ADUQ2189H1-0038
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                US $400.00
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span
+                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full"
+                              >
+                                <svg
+                                  class="size-2.5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8A8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                  />
+                                </svg>
+                                Paid
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                10 Jan 2023
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                28 Dec, 12:12
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white hover:bg-gray-50">
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="font-mono text-sm text-purple-600">
+                                #ADUQ2189H1-0038
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                US $400.00
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span
+                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full"
+                              >
+                                <svg
+                                  class="size-2.5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8A8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                  />
+                                </svg>
+                                Paid
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                10 Jan 2023
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                        <td class="size-px whitespace-nowrap">
+                          <a
+                            href="/dashboard/sales/invoice"
+                            class="block"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="hs-ai-invoice-modal"
+                            data-hs-overlay="#hs-ai-invoice-modal"
+                          >
+                            <span class="block px-6 py-2">
+                              <span class="text-sm text-gray-600">
+                                28 Dec, 12:12
+                              </span>
+                            </span>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <!-- Repeat the same pattern for other rows...  -->
+                      <!-- Just replace <button> with <a href="/dashboard/sales/invoice_view">  -->
+                    </tbody>
+                  </table>
+                  <!-- End Table  -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Card  -->
+        </div>
+        <!-- End Table Section  -->
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const progressBar = document.getElementById("progress-bar");
+        const targetPercent = 75.55; // Change this to your actual percent
+        const dashArray = 251.2;
+        const offset = dashArray - (dashArray * targetPercent) / 100;
+
+        setTimeout(() => {
+          progressBar.style.strokeDashoffset = offset;
+        }, 300); // slight delay for smoothness
+      });
+    </script>
+  </body>
+</html>

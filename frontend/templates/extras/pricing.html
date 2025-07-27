@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BetterStart</title>
+
+    <!-- Google Fonts: Albert Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+    <style>
+    *{
+      color: black;
+    }
+  </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Font -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Albert Sans"'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white h-screen flex font-sans"></body>
+  <!-- Pricing -->
+  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <!-- Title -->
+    <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+      <h2 class="text-2xl font-bold md:text-4xl md:leading-tight">Pricing</h2>
+      <p class="mt-1 text-gray-600">Whatever your status, our offers evolve
+        according to your needs.</p>
+    </div>
+    <!-- End Title -->
+
+    <!-- Switch -->
+    <div class="flex justify-center items-center gap-x-3">
+      <label for="pricing-switch" class="text-sm text-gray-800">Monthly</label>
+      <label for="pricing-switch"
+        class="relative inline-block w-11 h-6 cursor-pointer">
+        <input type="checkbox" id="pricing-switch" class="peer sr-only" checked>
+        <span
+          class="absolute inset-0 bg-gray-200 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-blue-600 peer-disabled:opacity-50 peer-disabled:pointer-events-none"></span>
+        <span
+          class="absolute top-1/2 start-0.5 -translate-y-1/2 size-5 bg-white rounded-full shadow-xs transition-transform duration-200 ease-in-out peer-checked:translate-x-full"></span>
+      </label>
+      <label for="pricing-switch" class="relative text-sm text-gray-800">
+        Annually
+        <span class="absolute -top-10 start-auto -end-28">
+          <span class="flex items-center">
+            <svg class="w-14 h-8 -me-6" width="45" height="25"
+              viewBox="0 0 45 25" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M43.2951 3.47877C43.8357 3.59191 44.3656 3.24541 44.4788 2.70484C44.5919 2.16427 44.2454 1.63433 43.7049 1.52119L43.2951 3.47877ZM4.63031 24.4936C4.90293 24.9739 5.51329 25.1423 5.99361 24.8697L13.8208 20.4272C14.3011 20.1546 14.4695 19.5443 14.1969 19.0639C13.9242 18.5836 13.3139 18.4152 12.8336 18.6879L5.87608 22.6367L1.92723 15.6792C1.65462 15.1989 1.04426 15.0305 0.563943 15.3031C0.0836291 15.5757 -0.0847477 16.1861 0.187863 16.6664L4.63031 24.4936ZM43.7049 1.52119C32.7389 -0.77401 23.9595 0.99522 17.3905 5.28788C10.8356 9.57127 6.58742 16.2977 4.53601 23.7341L6.46399 24.2659C8.41258 17.2023 12.4144 10.9287 18.4845 6.96211C24.5405 3.00476 32.7611 1.27399 43.2951 3.47877L43.7049 1.52119Z"
+                fill="currentColor" class="fill-gray-300" />
+            </svg>
+            <span
+              class="mt-3 inline-block whitespace-nowrap text-[11px] leading-5 font-semibold uppercase bg-blue-600 text-white rounded-full py-1 px-2.5">Save
+              up to 10%</span>
+          </span>
+        </span>
+      </label>
+    </div>
+    <!-- End Switch -->
+
+    <!-- Card Grid Section -->
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center">
+      <!-- Free Plan -->
+      <div
+        class="flex flex-col border border-gray-200 text-center rounded-xl p-8">
+        <h4 class="font-medium text-lg text-gray-800">Free</h4>
+        <span class="mt-7 font-bold text-5xl text-gray-800">Free</span>
+        <p class="mt-2 text-sm text-gray-500">Solo founders & micro-teams</p>
+
+        <ul class="mt-7 space-y-2.5 text-sm">
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">Core project management</span>
+          </li>
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">Basic finance tracking</span>
+          </li>
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">Up to 3 active users</span>
+          </li>
+        </ul>
+
+        <a
+          class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50"
+          href="#">
+          Sign up free
+        </a>
+      </div>
+
+      <!-- Startup Plan -->
+      <div
+        class="flex flex-col border-2 border-blue-600 text-center shadow-xl rounded-xl p-8">
+        <p class="mb-3"><span
+            class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg text-xs uppercase font-semibold bg-blue-100 text-blue-800">Most
+            popular</span></p>
+        <h4 class="font-medium text-lg text-gray-800">Startup</h4>
+        <span class="mt-5 font-bold text-5xl text-gray-800">
+          <span class="font-bold text-2xl -me-2">৳</span>
+          2,000
+        </span>
+        <p class="mt-2 text-sm text-gray-500">Early-stage teams (up to 7
+          people)</p>
+
+        <ul class="mt-7 space-y-2.5 text-sm">
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">CRM system</span>
+          </li>
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">Legal compliance toolkit</span>
+          </li>
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">Task automation</span>
+          </li>
+        </ul>
+
+        <a
+          class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+          href="#">
+          Get started
+        </a>
+      </div>
+
+      <!-- Growth Plan -->
+      <div
+        class="flex flex-col border border-gray-200 text-center rounded-xl p-8">
+        <h4 class="font-medium text-lg text-gray-800">Growth</h4>
+        <span class="mt-5 font-bold text-5xl text-gray-800">
+          <span class="font-bold text-2xl -me-2">৳</span>
+          5,000
+        </span>
+        <p class="mt-2 text-sm text-gray-500">Scaling companies (up to 15
+          people)</p>
+
+        <ul class="mt-7 space-y-2.5 text-sm">
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">All Startup features</span>
+          </li>
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">AI-driven insights</span>
+          </li>
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">Funding assistance</span>
+          </li>
+        </ul>
+
+        <a
+          class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50"
+          href="#">
+          Get started
+        </a>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div
+        class="flex flex-col border border-gray-200 text-center rounded-xl p-8">
+        <h4 class="font-medium text-lg text-gray-800">Enterprise</h4>
+        <span class="mt-5 font-bold text-5xl text-gray-800">Custom</span>
+        <p class="mt-2 text-sm text-gray-500">Established organizations with
+          custom demands</p>
+
+        <ul class="mt-7 space-y-2.5 text-sm">
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">Tailor-made solutions</span>
+          </li>
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">Dedicated account manager</span>
+          </li>
+          <li class="flex gap-x-2">
+            <svg class="shrink-0 mt-0.5 size-4 text-blue-600"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="text-gray-800">SLA guarantees</span>
+          </li>
+        </ul>
+
+        <a
+          class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50"
+          href="#">
+          Contact sales
+        </a>
+      </div>
+    </div>
+
+    <!-- AI Add-ons Section -->
+    <div class="mt-20 text-center">
+      <h3 class="text-2xl font-semibold mb-8">AI Feature Add-Ons</h3>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <p class="text-gray-600">
+          <span class="font-semibold">Startup & Growth customers:</span>
+          Purchase up to 2 AI modules for just ৳500 each.
+        </p>
+        <p class="text-gray-600">
+          <span class="font-semibold">Enterprise & Established firms:</span>
+          Gain full access to our comprehensive AI suite—leveraging vast
+          datasets and deep competitive analysis—for ৳20,000 per module.
+        </p>
+      </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="mt-20 text-center">
+      <h3 class="text-2xl font-semibold mb-8">Why Choose Us?</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div
+          class="flex flex-col border border-gray-200 text-center rounded-xl p-8">
+          <h4 class="font-semibold mb-2">Zero upfront cost</h4>
+          <p class="text-gray-600">Free 6-month trial for new startups</p>
+        </div>
+        <div
+          class="flex flex-col border border-gray-200 text-center rounded-xl p-8">
+          <h4 class="font-semibold mb-2">Seamless scaling</h4>
+          <p class="text-gray-600">Upgrade as your team grows</p>
+        </div>
+        <div
+          class="flex flex-col border border-gray-200 text-center rounded-xl p-8">
+
+          <h4 class="font-semibold mb-2">Modular AI tools</h4>
+          <p class="text-gray-600">Add exactly what you need</p>
+        </div>
+        <div
+          class="flex flex-col border border-gray-200 text-center rounded-xl p-8">
+
+          <h4 class="font-semibold mb-2">Dedicated support</h4>
+          <p class="text-gray-600">Enterprise-level assistance</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <!-- Replace the existing comparison table content -->
+<div class="mt-20 lg:mt-32">
+  <div class="lg:text-center mb-10 lg:mb-20">
+    <h3 class="text-2xl font-semibold">Compare plans</h3>
+  </div>
+
+  <div class="hidden lg:block">
+    <table class="w-full h-px">
+      <caption class="sr-only">Pricing plan comparison</caption>
+      <thead class="sticky top-0 inset-x-0 bg-white">
+        <tr>
+          <th class="py-4 ps-6 pe-6 text-sm font-medium text-gray-800 text-start" scope="col">Features</th>
+          <th class="w-1/4 py-4 px-6 text-lg leading-6 font-medium text-gray-800 text-center" scope="col">Free</th>
+          <th class="w-1/4 py-4 px-6 text-lg leading-6 font-medium text-gray-800 text-center" scope="col">Startup</th>
+          <th class="w-1/4 py-4 px-6 text-lg leading-6 font-medium text-gray-800 text-center" scope="col">Growth</th>
+          <th class="w-1/4 py-4 px-6 text-lg leading-6 font-medium text-gray-800 text-center" scope="col">Enterprise</th>
+        </tr>
+      </thead>
+      <tbody class="border-t border-gray-200 divide-y divide-gray-200">
+        <!-- Core Features -->
+        <tr>
+          <th class="py-3 ps-6 bg-gray-50 font-bold text-gray-800 text-start" colspan="5" scope="colgroup">Core Features</th>
+        </tr>
+
+        <!-- Team Members -->
+        <tr>
+          <th class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start" scope="row">Team Members</th>
+          <td class="py-5 px-6 text-center">Up to 3</td>
+          <td class="py-5 px-6 text-center">Up to 7</td>
+          <td class="py-5 px-6 text-center">Up to 15</td>
+          <td class="py-5 px-6 text-center">Unlimited</td>
+        </tr>
+
+        <!-- Project Management -->
+        <tr>
+          <th class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start" scope="row">Project Management</th>
+          <td class="py-5 px-6 text-center">Basic</td>
+          <td class="py-5 px-6 text-center">Advanced</td>
+          <td class="py-5 px-6 text-center">Advanced</td>
+          <td class="py-5 px-6 text-center">Custom</td>
+        </tr>
+
+        <!-- CRM Features -->
+        <tr>
+          <th class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start" scope="row">CRM Features</th>
+          <td class="py-5 px-6 text-center">-</td>
+          <td class="py-5 px-6 text-center">Basic</td>
+          <td class="py-5 px-6 text-center">Advanced</td>
+          <td class="py-5 px-6 text-center">Enterprise</td>
+        </tr>
+
+        <!-- AI Insights -->
+        <tr>
+          <th class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start" scope="row">AI Insights</th>
+          <td class="py-5 px-6 text-center">-</td>
+          <td class="py-5 px-6 text-center">2 modules</td>
+          <td class="py-5 px-6 text-center">5 modules</td>
+          <td class="py-5 px-6 text-center">Full Suite</td>
+        </tr>
+
+        <!-- Priority Support -->
+        <tr>
+          <th class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start" scope="row">Priority Support</th>
+          <td class="py-5 px-6 text-center">Email</td>
+          <td class="py-5 px-6 text-center">Email & Chat</td>
+          <td class="py-5 px-6 text-center">24/7 Chat</td>
+          <td class="py-5 px-6 text-center">Dedicated Manager</td>
+        </tr>
+
+        <!-- Data Analytics -->
+        <tr>
+          <th class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start" scope="row">Data Analytics</th>
+          <td class="py-5 px-6 text-center">Basic</td>
+          <td class="py-5 px-6 text-center">Advanced</td>
+          <td class="py-5 px-6 text-center">Custom</td>
+          <td class="py-5 px-6 text-center">Enterprise</td>
+        </tr>
+
+        <!-- API Access -->
+        <tr>
+          <th class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start" scope="row">API Access</th>
+          <td class="py-5 px-6 text-center">-</td>
+          <td class="py-5 px-6 text-center">Limited</td>
+          <td class="py-5 px-6 text-center">Full</td>
+          <td class="py-5 px-6 text-center">Custom</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+      <!-- End Comparison table -->
+    </div>
+    <!-- End Pricing -->
+
+  </body>
+</html>
