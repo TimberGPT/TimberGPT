@@ -31,6 +31,7 @@ class Settings(BaseSettings):
     # =========== API keys =========
     open_ai: str
     gemini_api_key: str
+    roboflow_api_key: str
 
     model_config = SettingsConfigDict(
         env_file=".env",
