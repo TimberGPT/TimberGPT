@@ -49,19 +49,41 @@ It combines **Natural Language Processing, Computer Vision, and RAG-based search
 
 ---
 
+
 ## ⚙️ Installation & Setup  
+
+### 1. Clone the repository
 
 ```bash
 # Clone the repository
 git clone https://github.com/TimberGPT/TimberGPT.git
 cd TimberGPT
+```
 
-# Backend Setup
+
+### 2. Configure Environment Variables
+Copy `.env.example` to `.env` in both `backend` and `frontend`, then update values as needed.
+
+
+### 3. Backend Setup
+Make sure [uv](https://docs.astral.sh/uv/getting-started/installation/) is installed:
+```bash
+pip install uv
+```
+
+Then install dependencies and run:
+```bash
 cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
+uv sync
+uv run uvicorn src.main:app 
+```
+> Backend runs at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-# Frontend Setup
+
+### 4. Frontend Setup
+```bash
 cd frontend
 npm install
 npm run dev
+```
+> Frontend runs at [http://localhost:3000](http://localhost:3000)
